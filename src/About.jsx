@@ -191,19 +191,19 @@ function About() {
     </span>
   </li>
   <li className="book-wrapper">
-  <span className={`book-text delay-5 ${row2Visible ? "book-open" : ""}`}>
+  <span className={`book-text delay-4 ${row2Visible ? "book-open" : ""}`}>
     Agile methodologies ensuring faster delivery and continuous improvement
   </span>
 </li>
 
 <li className="book-wrapper">
-  <span className={`book-text delay-6 ${row2Visible ? "book-open" : ""}`}>
+  <span className={`book-text delay-4 ${row2Visible ? "book-open" : ""}`}>
     Data-driven decision making to optimize performance and outcomes
   </span>
 </li>
 
 <li className="book-wrapper">
-  <span className={`book-text delay-7 ${row2Visible ? "book-open" : ""}`}>
+  <span className={`book-text delay-4 ${row2Visible ? "book-open" : ""}`}>
     Collaborative execution aligned with client goals and business vision
   </span>
 </li>

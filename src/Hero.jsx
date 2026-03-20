@@ -136,8 +136,6 @@ function Hero() {
                   for modern organizations.
                 </span>
               </p>
-
-              <button>Explore More</button>
             </div>
 
             <div className={`hero-image ${mounted && heroVisible ? "image-show" : ""}`}>
@@ -218,13 +216,15 @@ function Hero() {
 
           <div className="home-about-mint-box">
             <button className="home-about-btn book-wrapper" >
-              <a href="/about" style={{ color: "inherit", textDecoration: "none" }}>
-              <span className={`book-text ${
-                mounted && aboutVisible ? "book-open" : ""
-              }`}>
-                Learn More
-              </span>
-              </a>
+              <Link to="/about" className="home-about-btn book-wrapper">
+  <span
+    className={`book-text ${
+      mounted && aboutVisible ? "book-open" : ""
+    }`}
+  >
+    Learn More
+  </span>
+</Link>
             </button>
           </div>
         </div>
