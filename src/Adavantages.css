@@ -1,0 +1,135 @@
+/* ================= SECTION ================= */
+
+.advantages-section {
+  padding: 90px 6%;
+  background: white;
+}
+
+/* ================= HEADER ================= */
+
+.advantages-header {
+  background: linear-gradient(135deg, #0a0a0a, #000000);
+  border-radius: 28px;
+  padding: 35px 50px;
+  margin-bottom: 50px;
+  color: white;
+  height: 250px;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  
+}
+
+.advantages-header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.small-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-size: 58px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* ================= GRID ================= */
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+/* ================= CARDS ================= */
+
+.adv-card {
+  background: #e9eaec;
+  border-radius: 28px;
+  padding: 55px 40px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  opacity: 0;
+  transform: translateY(-400px);
+
+  transition:
+    transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.3s ease;
+}
+
+.adv-card.slide-down {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover only after animation */
+.adv-card.slide-down:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ================= ICON ================= */
+
+.adv-image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+  color: #050505;
+}
+
+/* ================= NUMBER ================= */
+
+.adv-number {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: #0f2d22;
+}
+
+/* ================= TITLE ================= */
+
+.adv-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* ================= TEXT ================= */
+
+.adv-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-header {
+    padding: 40px 30px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+}

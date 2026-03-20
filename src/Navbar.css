@@ -1,0 +1,156 @@
+/* ============================= */
+/* NAV WRAPPER */
+/* ============================= */
+
+.nav-wrapper {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  z-index: 1000;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+  width: 92%;
+  max-width: 1400px;
+  background: linear-gradient(90deg, #0c2b1c, #123a27);
+  border-radius: 40px;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+/* Logo */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.rotating-ring {
+  width: 30px;
+  height: 30px;
+  border: 3px dotted #8fe3b0;
+  border-radius: 50%;
+  animation: rotate 12s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* Links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #8fe3b0;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    width: 94%;
+    padding: 18px 25px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 100%;
+    background: linear-gradient(180deg, #0c2b1c, #123a27);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    transform: translateY(-100%);
+    transition: 0.5s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+}
+/* CROSS ANIMATION */
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

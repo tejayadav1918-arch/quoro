@@ -1,0 +1,150 @@
+/* ===== PAGE ===== */
+.fc-page {
+  background: #0c2d25;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.fc-hero {
+  background: linear-gradient(to right, #0f3b2e, #0c2d25);
+  padding: 120px 5% 100px;
+  text-align: center;
+}
+
+.fc-label {
+  font-size: 16px;
+  color: #7fe0b0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.fc-title {
+  font-size: clamp(48px, 7vw, 90px);
+  font-weight: 300;
+  color: #7fe0b0;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  letter-spacing: -1px;
+}
+
+.fc-subtitle {
+  font-size: 18px;
+  color: #a0c8b8;
+  margin: 0;
+}
+
+/* ===== CARDS STACK ===== */
+.fc-stack {
+  width: 100%;
+  background: linear-gradient(to right, #0f3b2e, #0c2d25);
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 180px;
+  padding-bottom: 100px;
+  border-radius: 40px;
+  overflow-x: hidden;
+}
+
+.fc-spacer {
+  height: 40px;
+}
+
+/* ===== CARD WRAPPER ===== */
+.fc-wrapper {
+  width: min(900px, 90%);
+  perspective: 1200px;
+  perspective-origin: 50% 0%;
+}
+
+/* ===== CARD ===== */
+.fc-card {
+  width: 100%;
+  min-height: 220px;
+  padding: 60px 55px;
+  background: #e5e5e5;
+  border-radius: 40px;
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  opacity: 0;
+  transform: rotateX(-150deg);
+  will-change: transform, opacity;
+}
+
+/* ===== CARD BODY ===== */
+.fc-body {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ===== ICON ===== */
+.fc-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  color: #1a5c45;
+}
+
+/* ===== TEXT ===== */
+.fc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fc-card h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #111;
+  line-height: 1.2;
+}
+
+.fc-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .fc-card {
+    padding: 40px 30px;
+    min-height: 160px;
+    border-radius: 28px;
+  }
+  .fc-hero {
+    padding: 80px 5% 60px;
+  }
+  .fc-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ===== SERVICE CODE ===== */
+.svc-code {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1a5c45;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ===== SERVICE CODE ===== */
+.fc-code {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1a5c45;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}

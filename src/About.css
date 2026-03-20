@@ -1,0 +1,212 @@
+/* ================= HERO ================= */
+
+.about-banner {
+  padding: 50px 3%;
+}
+
+.about-banner img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 40px;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.about-hero {
+  padding: 40px 3% 0;
+}
+
+.about-hero-inner {
+  background: linear-gradient(135deg, #000000, #000000);
+  border-radius: 40px;
+  padding: 120px 50px;
+  color: #e5e5e5;
+}
+
+.about-hero-inner h1 {
+  font-size: 110px;
+  font-weight: 300;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+/* ================= CONTAINER ================= */
+
+.about {
+  width: 100%;
+  padding: 40px 4%;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* ================= SECTION ================= */
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ================= ROW ================= */
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 50px;
+  min-height: 500px;
+}
+
+/* ================= IMAGE ================= */
+
+.about-image {
+  border-radius: 40px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= TEXT ================= */
+
+.about-content {
+  background: #b3ffe2;
+  border-radius: 32px;
+  padding: 60px 55px;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-style: oblique;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+
+.about-content h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 25px; /* fixed — was still 25px despite comment */
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* ================= ZIG ZAG ================= */
+
+.about-row:nth-child(even) .about-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.about-row:nth-child(even) .about-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .about-hero-inner {
+    padding: 90px 60px;
+  }
+  .about-hero-inner h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-row:nth-child(even) .about-image,
+  .about-row:nth-child(even) .about-content {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .about-content {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-inner {
+    padding: 70px 30px;
+    border-radius: 30px;
+  }
+  .about-hero-inner h1 {
+    font-size: 42px;
+  }
+  .about-banner img {
+    height: 300px;
+  }
+}
+
+/* ================= SIDE ANIMATION ================= */
+
+.about-row:nth-child(1) .about-image {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.about-row:nth-child(1) .about-content {
+  opacity: 0;
+  transform: translateX(150px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.about-row:nth-child(2) .about-content {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.about-row:nth-child(2) .about-image {
+  opacity: 0;
+  transform: translateX(150px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.about-row.show .about-image,
+.about-row.show .about-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+.vision-points {
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.vision-points li {
+  margin-bottom: 8px;
+  list-style: none;
+  position: relative;
+  padding-left: 18px;
+}
+
+.vision-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 7px;
+  background: #0f9d58; /* match your green */
+  border-radius: 50%;
+}
+.vision-points li span {
+  font-size: 20px;
+  line-height: 1.8;
+}
