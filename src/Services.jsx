@@ -30,7 +30,7 @@ function FlipCard({ children }) {
       const centerOffset = rect.top + cardHeight / 2 - windowHeight / 2;
       const range = windowHeight / 2;
       const progress = Math.min(1, Math.max(0, 1 - centerOffset / range));
-      const rotate = -80 * (1 - progress);
+      const rotate = -150 * (1 - progress);
       const lift = 60 * progress;
       el.style.transform = `rotateX(${rotate}deg) translateZ(${lift}px)`;
       el.style.boxShadow = `0 ${20 + lift / 3}px ${40 + lift}px rgba(0,0,0,${0.2 + 0.3 * progress})`;
@@ -105,31 +105,37 @@ const IconDevOps = () => (
 
 const fcItems = [
   {
+    code: "S0802",
     icon: <IconInfra />,
     title: "IT Infrastructure Management",
     desc: "Comprehensive management of organizational IT infrastructure including servers, networks, and storage systems to ensure high availability, performance stability, and operational continuity."
   },
   {
+    code: "S0803",
     icon: <IconCloud />,
     title: "Cloud Migration & Deployment",
     desc: "End-to-end migration of business applications and data from on-premise environments to cloud platforms, ensuring secure transfer, optimized resource utilization, and minimal downtime."
   },
   {
+    code: "S0804",
     icon: <IconSecurity />,
     title: "Cybersecurity Implementation",
     desc: "Deployment of advanced security frameworks and protocols to protect digital assets, prevent unauthorized access, and ensure compliance with industry security standards."
   },
   {
+    code: "S0805",
     icon: <IconAnalytics />,
     title: "Data Analytics & Business Intelligence",
     desc: "Extraction, processing, and analysis of business data to generate actionable insights, enabling informed decision-making and strategic planning."
   },
   {
+    code: "S0806",
     icon: <IconConsulting />,
     title: "IT Consulting & Digital Transformation",
     desc: "Strategic consulting to modernize IT systems, optimize workflows, and implement digital technologies that improve efficiency and business performance."
   },
   {
+    code: "S0807",
     icon: <IconDevOps />,
     title: "DevOps Implementation & Automation",
     desc: "Design and implementation of DevOps practices including CI/CD pipelines, infrastructure as code, and automated deployment workflows to enhance development efficiency, system reliability, and faster release cycles."
@@ -137,13 +143,32 @@ const fcItems = [
 ];
 
 export default function FlipStackPage() {
+  const [heroVisible, setHeroVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setHeroVisible(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="fc-page">
 
       <div className="fc-hero">
-        <p className="fc-label">Our Services</p>
-        <h1 className="fc-title">Empowering Your<br />Business Growth</h1>
-        <p className="fc-subtitle">Discover how our solutions can elevate your business.</p>
+        <p className="book-wrapper">
+          <span className={`fc-label book-text ${heroVisible ? "book-open" : ""}`}>
+            Our Services
+          </span>
+        </p>
+        <h1 className="book-wrapper">
+          <span className={`fc-title book-text delay-1 ${heroVisible ? "book-open" : ""}`}>
+            Empowering Your<br />Business Growth
+          </span>
+        </h1>
+        <p className="book-wrapper">
+          <span className={`fc-subtitle book-text delay-2 ${heroVisible ? "book-open" : ""}`}>
+            Discover how our solutions can elevate your business.
+          </span>
+        </p>
       </div>
 
       <div className="fc-stack">

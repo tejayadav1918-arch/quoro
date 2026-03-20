@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 import ServicesGlimpse from "./ServiceGlimpse.jsx";
 import Advantages from "./Adavantages.jsx";
+import { Link } from "react-router-dom";
+
 
 function Hero() {
 
@@ -215,18 +217,19 @@ function Hero() {
           </div>
 
           <div className="home-about-mint-box">
-            <button className="home-about-btn book-wrapper" >
-              <Link to="/about" className="home-about-btn book-wrapper">
-  <span
-    className={`book-text ${
-      mounted && aboutVisible ? "book-open" : ""
-    }`}
+  <Link
+    to="/about"
+    className="home-about-btn book-wrapper"
   >
-    Learn More
-  </span>
-</Link>
-            </button>
-          </div>
+    <span
+      className={`book-text ${
+        mounted && aboutVisible ? "book-open" : ""
+      }`}
+    >
+      Learn More
+    </span>
+  </Link>
+</div>
         </div>
       </section>
 

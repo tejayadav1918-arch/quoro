@@ -5,6 +5,7 @@ import "./Navbar.css";
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +25,14 @@ function Navbar() {
         </div>
 
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/services">Our Services</Link>
-          <Link to="/contact">Contact Us</Link>
-          <Link to="/contact" className="contact-btn">Contact Us</Link>
-        </div>
+  <Link to="/" onClick={closeMenu}>Home</Link>
+  <Link to="/about" onClick={closeMenu}>About Us</Link>
+  <Link to="/services" onClick={closeMenu}>Our Services</Link>
+  <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
+  <Link to="/contact" className="contact-btn" onClick={closeMenu}>
+    Contact Us
+  </Link>
+</div>
 
         <div 
           className={`hamburger ${menuOpen ? "active" : ""}`} 

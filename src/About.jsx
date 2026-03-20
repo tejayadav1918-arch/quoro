@@ -117,7 +117,7 @@ function About() {
               </p>
               <ul className="vision-points">
   <li className="book-wrapper">
-    <span className={`book-text delay-3 ${row1Visible ? "book-open" : ""}`}>
+    <span className={`book-text delay-4 ${row1Visible ? "book-open" : ""}`}>
       Driving innovation through advanced technology solutions
     </span>
   </li>
@@ -180,7 +180,7 @@ function About() {
               </p>
               <ul className="vision-points">
   <li className="book-wrapper">
-    <span className={`book-text delay-3 ${row2Visible ? "book-open" : ""}`}>
+    <span className={`book-text delay-4 ${row2Visible ? "book-open" : ""}`}>
       Strategic, business-aligned solutions designed for long-term scalability
     </span>
   </li>

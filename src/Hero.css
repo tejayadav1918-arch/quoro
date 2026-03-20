@@ -2,16 +2,12 @@
 /* GLOBAL RESET */
 /* ===================================== */
 
-html, body {
+body {
   margin: 0;
   padding: 0;
-  /* FIXES horizontal scrollbar globally */
+  overflow-x: hidden;
   font-family: system-ui, -apple-system, sans-serif;
   box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -40,12 +36,12 @@ body {
 
 .hero-video {
   flex: 1;
-  min-height: 500px;
   border-radius: 30px;
   overflow: hidden;
   opacity: 0;
   transform: translateX(-120px);
   transition: opacity 1.4s ease, transform 1.4s ease;
+  height: 1000px;
 }
 
 .hero-video.video-show {
@@ -321,7 +317,20 @@ body {
   .home-about-image img { height: 260px; }
   .home-about-title-wrapper h2 { font-size: 36px; }
 }
+@media (max-width: 768px) {
+  .home-about-grey-strip {
+    padding: 20px 15px;   /* ✅ reduce padding */
+  }
 
+  .home-about-grey-strip h4 {
+    font-size: 22px;   /* ✅ reduce heading */
+  }
+
+  .home-about-grey-strip p {
+    font-size: 14px;   /* ✅ reduce text */
+    line-height: 1.5;
+  }
+}
 /* ================= GLOBAL FADE SYSTEM ================= */
 
 .fade-up {

@@ -6,7 +6,6 @@
   opacity: 0;
   transform: translateY(100px);
   transition: all 1.5s cubic-bezier(0.22,1,0.36,1);
-
 }
 
 .contact-main-page.show {
