@@ -74,7 +74,7 @@ function About() {
       {/* BANNER */}
       <section
         ref={bannerRef}
-        className={`about-banner fade-up ${bannerVisible ? "show" : ""}`}
+        className={`about-banner ${bannerVisible ? "show" : ""}`}
       >
         <img src="/videos/bal.png" alt="Banner" />
       </section>
