@@ -98,11 +98,11 @@ function ServicesGlimpse() {
   }, [index, slides.length]);
 
   return (
+    <div className="sg-overflow-clip">
     <section
       ref={sectionRef}
-      className={`sg-section fade-up ${visible ? "show" : ""}`}
+      className={`sg-section ${visible ? "sg-visible" : ""}`}
     >
-      <div className="sg-overflow-clip">
       <div
         className="sg-track"
         style={{
@@ -152,8 +152,6 @@ function ServicesGlimpse() {
         ))}
       </div>
 
-      </div>{/* end sg-overflow-clip */}
-
       {/* DOTS */}
       <div className="sg-dots">
         {slidesData.map((_, i) => (
@@ -166,6 +164,7 @@ function ServicesGlimpse() {
       </div>
 
     </section>
+    </div>
   );
 }
 

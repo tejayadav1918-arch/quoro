@@ -1,14 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 .whatsapp-container {
   position: fixed;
   bottom: 30px;
   right: 30px;
   z-index: 9999;
-  max-width: 65px; /* clamp to icon size by default */
-  overflow: hidden; /* prevent expansion from affecting layout */
-}
-
-.whatsapp-container:hover {
-  max-width: 200px; /* allow expansion only on hover */
 }
 
 .whatsapp-float {
@@ -32,44 +30,30 @@
   transition: width 0.4s ease;
 }
 
+/* Icon stays left */
 .whatsapp-icon {
   font-size: 30px;
   flex-shrink: 0;
 }
 
+/* Text hidden initially */
 .whatsapp-text {
   white-space: nowrap;
   font-size: 14px;
   font-weight: 500;
+
   opacity: 0;
   width: 0;
   transition: opacity 0.3s ease;
 }
 
+/* Expand */
 .whatsapp-float:hover {
   width: 150px;
 }
 
+/* Show text */
 .whatsapp-float:hover .whatsapp-text {
   opacity: 1;
   width: auto;
-}
-
-/* Mobile — no expand */
-@media (max-width: 768px) {
-  .whatsapp-container {
-    bottom: 20px;
-    right: 20px;
-    max-width: 65px !important;
-    overflow: hidden;
-  }
-
-  .whatsapp-float:hover {
-    width: 65px;
-  }
-
-  .whatsapp-float:hover .whatsapp-text {
-    opacity: 0;
-    width: 0;
-  }
 }

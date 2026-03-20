@@ -105,37 +105,37 @@ const IconDevOps = () => (
 
 const fcItems = [
   {
-    code: "S0802",
+  
     icon: <IconInfra />,
     title: "IT Infrastructure Management",
     desc: "Comprehensive management of organizational IT infrastructure including servers, networks, and storage systems to ensure high availability, performance stability, and operational continuity."
   },
   {
-    code: "S0803",
+
     icon: <IconCloud />,
     title: "Cloud Migration & Deployment",
     desc: "End-to-end migration of business applications and data from on-premise environments to cloud platforms, ensuring secure transfer, optimized resource utilization, and minimal downtime."
   },
   {
-    code: "S0804",
+
     icon: <IconSecurity />,
     title: "Cybersecurity Implementation",
     desc: "Deployment of advanced security frameworks and protocols to protect digital assets, prevent unauthorized access, and ensure compliance with industry security standards."
   },
   {
-    code: "S0805",
+
     icon: <IconAnalytics />,
     title: "Data Analytics & Business Intelligence",
     desc: "Extraction, processing, and analysis of business data to generate actionable insights, enabling informed decision-making and strategic planning."
   },
   {
-    code: "S0806",
+
     icon: <IconConsulting />,
     title: "IT Consulting & Digital Transformation",
     desc: "Strategic consulting to modernize IT systems, optimize workflows, and implement digital technologies that improve efficiency and business performance."
   },
   {
-    code: "S0807",
+
     icon: <IconDevOps />,
     title: "DevOps Implementation & Automation",
     desc: "Design and implementation of DevOps practices including CI/CD pipelines, infrastructure as code, and automated deployment workflows to enhance development efficiency, system reliability, and faster release cycles."
