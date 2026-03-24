@@ -33,7 +33,12 @@
 }
 
 /* Logo */
-
+.logo-image {
+  height: 90px;   /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+  padding-left: 30px;
+}
 .logo-section {
   display: flex;
   align-items: center;
@@ -161,4 +166,20 @@
 
 .hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+/* Fade down animation */
+.nav-wrapper {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.8s ease;
+}
+
+.nav-wrapper.fade-down {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* smoother performance */
+.navbar {
+  will-change: transform, opacity;
 }

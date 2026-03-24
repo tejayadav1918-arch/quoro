@@ -42,6 +42,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+
+  align-items: start; /* 👈 THIS is the key */
 }
 
 .main-links,
@@ -63,7 +65,19 @@
   color: white;
   transform: translateX(4px);
 }
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 👈 push to top */
+  margin-top: -70px;
+  padding-right: 70px; /* tweak this (5–20px) as needed */
+}
 
+.footer-logo img {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+}
 .info-row {
   display: flex;
   align-items: flex-start;
@@ -92,6 +106,19 @@
   margin: 0;
   font-size: 14px;
   letter-spacing: 0.5px;
+}
+/* initial state */
+.fade-logo img {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* trigger when footer is visible */
+.footer-wrapper.show .fade-logo img {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+  transition-delay: 0.3s; /* delay after text animation */
 }
 
 @media (max-width: 900px) {

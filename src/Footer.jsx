@@ -103,25 +103,29 @@ function Footer() {
             </span>
           </h3>
 
-          <div className="links-columns">
+         <div className="links-columns">
 
-            <div className="main-links">
-              <Link to="/" className="book-wrapper">
-                <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>Home</span>
-              </Link>
-              <Link to="/about" className="book-wrapper">
-                <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>About</span>
-              </Link>
-              <Link to="/services" className="book-wrapper">
-                <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>Services</span>
-              </Link>
-              <Link to="/contact" className="book-wrapper">
-                <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>Contact Us</span>
-              </Link>
-            </div>
+  <div className="main-links">
+    <Link to="/" className="book-wrapper">
+      <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>Home</span>
+    </Link>
+    <Link to="/about" className="book-wrapper">
+      <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>About</span>
+    </Link>
+    <Link to="/services" className="book-wrapper">
+      <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>Services</span>
+    </Link>
+    <Link to="/contact" className="book-wrapper">
+      <span className={`book-text delay-2 ${footerVisible ? "book-open" : ""}`}>Contact Us</span>
+    </Link>
+  </div>
 
+  {/* 👇 ADD THIS */}
+  <div className="footer-logo fade-logo">
+  <img src="./videos/logo.png" alt="Quoro Logo" />
+</div>
 
-          </div>
+</div>
         </div>
 
       </div>
