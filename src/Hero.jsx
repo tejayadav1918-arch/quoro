@@ -4,6 +4,7 @@ import "./Hero.css";
 import ServicesGlimpse from "./ServiceGlimpse.jsx";
 import Advantages from "./Adavantages.jsx";
 import { Link } from "react-router-dom";
+import ContactGlobe from "./ContactGlobe.jsx";
 
 
 function Hero() {
@@ -314,6 +315,7 @@ function Hero() {
           </div>
         </div>
       </section>
+      <ContactGlobe />
 
       {/* SUCCESS POPUP */}
        {success && (

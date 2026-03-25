@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+.globe-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 80px;
+  background: #051a0e;
+  border: 1px solid #1a5030;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  max-width: 100%;
+  font-family: 'Syne', sans-serif;
+  color: #d0f0e0;
+}
+
+/* ── Stars ── */
+.gs-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.gs-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #aaffcc;
+  border-radius: 50%;
+  opacity: 0;
+  animation: gs-twinkle var(--d, 3s) var(--delay, 0s) infinite;
+}
+
+@keyframes gs-twinkle {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: var(--op, 0.6); }
+}
+
+/* ── Globe side ── */
+.gs-globe-side {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  color: #fbfbfb99;
+}
+
+.gs-globe-wrap {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.gs-sphere {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 34%, #000000 0%, #000000 45%, #020e07 100%);
+  box-shadow:
+    0 0 80px #00000055,
+    0 0 160px #00000044,
+    inset -40px -25px 80px #00000099;
+  overflow: hidden;
+  position: relative;
+}
+
+.gs-sphere svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.gs-shine {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(180,255,200,0.18) 0%, transparent 70%);
+  top: 34px;
+  left: 46px;
+  pointer-events: none;
+}
+
+.gs-globe-land {
+  animation: gs-globe-spin 20s linear infinite;
+}
+
+@keyframes gs-globe-spin {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-320px); }
+}
+
+/* ── Orbit rings ── */
+.gs-orbit-ring {
+  position: absolute;
+  border: 1.5px dashed rgba(80, 220, 130, 0.25);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+}
+
+.gs-o1 { width: 380px; height: 150px; transform: translate(-50%,-50%) rotateX(72deg); }
+.gs-o2 { width: 420px; height: 110px; transform: translate(-50%,-50%) rotateX(72deg) rotateZ(50deg); }
+.gs-o3 { width: 400px; height: 170px; transform: translate(-50%,-50%) rotateX(65deg) rotateZ(-30deg); }
+
+/* ── Orbiting objects ── */
+.gs-orbit-anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gs-a1 {
+  width: 380px; height: 150px;
+  animation: gs-spin1 6s linear infinite;
+}
+.gs-a2 {
+  width: 420px; height: 110px;
+  animation: gs-spin2 9s linear infinite;
+}
+.gs-a3 {
+  width: 400px; height: 170px;
+  animation: gs-spin3 8s linear infinite;
+}
+
+@keyframes gs-spin1 {
+  from { transform: translate(-50%,-50%) rotateX(72deg) rotateZ(0deg); }
+  to   { transform: translate(-50%,-50%) rotateX(72deg) rotateZ(360deg); }
+}
+@keyframes gs-spin2 {
+  from { transform: translate(-50%,-50%) rotateX(72deg) rotateZ(50deg); }
+  to   { transform: translate(-50%,-50%) rotateX(72deg) rotateZ(410deg); }
+}
+@keyframes gs-spin3 {
+  from { transform: translate(-50%,-50%) rotateX(65deg) rotateZ(-30deg); }
+  to   { transform: translate(-50%,-50%) rotateX(65deg) rotateZ(330deg); }
+}
+
+.gs-dot-green {
+  position: absolute;
+  top: -6px; left: 50%;
+  width: 12px; height: 12px;
+  background: #4dff91;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4dff91, 0 0 22px #4dff9133;
+  transform: translateX(-50%);
+}
+
+.gs-dot-lime {
+  position: absolute;
+  top: -5px; left: 50%;
+  width: 9px; height: 9px;
+  background: #a3ffcc;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #a3ffcc;
+  transform: translateX(-50%);
+}
+
+.gs-plane {
+  position: absolute;
+  top: -16px; left: 50%;
+  font-size: 24px;
+  transform: translateX(-50%) rotate(90deg);
+  filter: drop-shadow(0 0 8px rgba(100,255,160,0.8));
+  line-height: 1;
+}
+
+/* ── Map side ── */
+.gs-map-side {
+  flex: 1;
+  max-width: 340px;
+  min-width: 240px;
+}
+
+.gs-map-tag {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #4dff91;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.gs-map-heading {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #d0f0e0;
+  margin-bottom: 8px;
+}
+
+.gs-map-desc {
+  font-size: 13px;
+  color: #5a9a70;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+/* ── Map card ── */
+.gs-map-link {
+  text-decoration: none;
+  display: block;
+}
+
+.gs-map-card {
+  background: #071a10;
+  border: 1px solid #1e5a35;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.gs-map-card:hover {
+  border-color: #4dff91;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px #4dff9122;
+}
+
+.gs-map-card svg {
+  width: 100%;
+  height: 210px;
+  display: block;
+}
+
+.gs-map-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-top: 1px solid #1e5a35;
+}
+
+.gs-pin-badge {
+  width: 32px;
+  height: 32px;
+  background: #0d2a18;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.gs-loc-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4dff91;
+}
+
+.gs-loc-coords {
+  font-size: 11px;
+  color: #3a6a4a;
+  margin-top: 3px;
+}
+
+/* ── Outer wrapper ── */
+.gs-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #020d06;
+  padding: 40px 20px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .globe-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+
+  .gs-globe-side {
+    width: 300px;
+    height: 300px;
+  }
+
+  .gs-globe-wrap,
+  .gs-sphere {
+    width: 260px;
+    height: 260px;
+  }
+
+  .gs-o1 { width: 300px; height: 120px; }
+  .gs-o2 { width: 340px; height: 90px; }
+  .gs-o3 { width: 320px; height: 135px; }
+  .gs-a1 { width: 300px; height: 120px; }
+
+  .gs-map-side {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.globe-section {
+  border-radius: 30px;   /* adjust 20–40px */
+  overflow: hidden;      /* VERY IMPORTANT */
+}

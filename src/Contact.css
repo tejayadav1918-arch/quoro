@@ -176,6 +176,8 @@
 
   .contact-main-title {
     font-size: 40px;
+    text-align: center;
+    padding-left: 40px;
   }
 
   .contact-main-form-row {
@@ -242,4 +244,39 @@
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+}
+@media (max-width: 768px) {
+
+  /* FULL CENTER FIX */
+  .contact-main-right {
+    padding: 30px 20px !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* REMOVE LEFT PUSH */
+  .contact-main-title {
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  /* CENTER FORM */
+  .contact-main-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* CENTER BUTTON */
+  .contact-main-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  /* FIX IMAGE WIDTH */
+  .contact-main-left img {
+    width: 100%;
+  }
+
 }

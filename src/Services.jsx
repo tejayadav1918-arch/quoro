@@ -21,25 +21,58 @@ function FlipCard({ children }) {
   }, []);
 
   useEffect(() => {
-    if (!entered) return;
-    const el = ref.current;
-    const handleScroll = () => {
-      const rect = el.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const cardHeight = rect.height;
-      const centerOffset = rect.top + cardHeight / 2 - windowHeight / 2;
-      const range = windowHeight / 2;
-      const progress = Math.min(1, Math.max(0, 1 - centerOffset / range));
-      const rotate = -150 * (1 - progress);
-      const lift = 60 * progress;
-      el.style.transform = `rotateX(${rotate}deg) translateZ(${lift}px)`;
-      el.style.boxShadow = `0 ${20 + lift / 3}px ${40 + lift}px rgba(0,0,0,${0.2 + 0.3 * progress})`;
-      el.style.opacity = `${0.2 + 0.8 * progress}`;
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [entered]);
+  if (!entered) return;
+
+  const el = ref.current;
+
+  let ticking = false;
+
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const cardHeight = rect.height;
+
+        const centerOffset =
+          rect.top + cardHeight / 2 - windowHeight / 2;
+
+        const range = windowHeight / 2;
+
+        const progress = Math.min(
+          1,
+          Math.max(0, 1 - centerOffset / range)
+        );
+
+        const isMobile = window.innerWidth < 768;
+
+        // 🔥 Smooth mobile-friendly values
+        const rotate = isMobile
+          ? -70* (1 - progress)
+          : -120 * (1 - progress);
+
+        const lift = isMobile
+          ? 30 * progress
+          : 70 * progress;
+
+        el.style.transform = `rotateX(${rotate}deg) translateZ(${lift}px)`;
+        el.style.boxShadow = `0 ${20 + lift / 3}px ${40 + lift}px rgba(0,0,0,${0.2 + 0.3 * progress})`;
+        el.style.opacity = `${0.3 + 0.7 * progress}`;
+
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+
+}, [entered]);
 
   return (
     <div className="fc-wrapper">
@@ -102,6 +135,24 @@ const IconDevOps = () => (
     <path d="M8 6c0 0 1 1.5 1 4s-1 4-1 4"/>
   </svg>
 );
+const IconDatacenter = () => (
+  <svg className="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3">
+    <rect x="3" y="4" width="18" height="6" rx="1"/>
+    <rect x="3" y="14" width="18" height="6" rx="1"/>
+    <circle cx="7" cy="7" r="0.8" fill="currentColor"/>
+    <circle cx="7" cy="17" r="0.8" fill="currentColor"/>
+    <line x1="10" y1="7" x2="17" y2="7"/>
+    <line x1="10" y1="17" x2="17" y2="17"/>
+  </svg>
+);
+const IconTransformation = () => (
+  <svg className="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12"/>
+    <path d="M2 12h3M19 12h3"/>
+    <path d="M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+  </svg>
+);
 
 const fcItems = [
   {
@@ -139,6 +190,18 @@ const fcItems = [
     icon: <IconDevOps />,
     title: "DevOps Implementation & Automation",
     desc: "Design and implementation of DevOps practices including CI/CD pipelines, infrastructure as code, and automated deployment workflows to enhance development efficiency, system reliability, and faster release cycles."
+  },
+  {
+
+    icon: <IconDatacenter />,
+    title: "DATA CENTER INFRASTRUCTURE MANAGEMENT SERVICE",
+    desc: "We provide end-to-end data center management solutions, ensuring reliable infrastructure, efficient resource utilization, and uninterrupted operations."
+  },
+  {
+
+    icon: <IconTransformation />,
+    title: "DIGITAL TRANSFORMATION CONSULTING SERVICE",
+    desc: "We help organizations adopt modern technologies and transform traditional processes to enhance efficiency, agility, and innovation. Our consulting approach focuses on aligning technology with business goals, enabling seamless integration, improved customer experiences."
   },
 ];
 

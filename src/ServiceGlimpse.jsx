@@ -36,16 +36,28 @@ const slidesData = [
   },
   {
     title: "IT CONSULTING AND DIGITAL TRANSFORMATION SERVICE",
-    text: "Strategic consulting to modernize IT systems, optimize workflows, and implement digital technologies that improve efficiency and business performance.",
+    text: "Strategic consulting to modernize IT systems, optimize workflows, and implement digital technologies that improve efficiency.",
     icons: [FiActivity, FiCloud, FiCode],
     image: "/videos/ben.png"
   },
   {
     title: "DEVOPS IMPLEMENTATION AND AUTOMATION SERVICE",
-    text: "Enterprise-grade IT infrastructure management.",
+    text: "Our DevOps solutions enable seamless collaboration between development and operations teams through automated pipelines .",
     icons: [FiCpu, FiShield, FiDatabase],
     image: "/videos/Phi.webp"
-  }
+  },
+  {
+    title: "DATA CENTER INFRASTRUCTURE MANAGEMENT SERVICE",
+    text: "We provide end-to-end data center management solutions, ensuring reliable infrastructure, efficient resource utilization, and uninterrupted operations.",
+    icons: [FiActivity, FiCloud, FiCode],
+    image: "/videos/Date.jpeg"
+  },
+  {
+    title: "DIGITAL TRANSFORMATION CONSULTING SERVICE",
+    text: "We help organizations adopt modern technologies and transform traditional processes to enhance efficiency, agility, and innovation",
+    icons: [FiActivity, FiCloud, FiCode],
+    image: "/videos/peep.webp"
+  },
 ];
 
 function ServicesGlimpse() {

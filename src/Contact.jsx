@@ -9,35 +9,63 @@ function Contact() {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // ✅ Mount
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  // ✅ Animation Observer (Mobile + Desktop optimized)
   useEffect(() => {
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.3,
-        rootMargin: "0px 0px -100px 0px"
-      }
-    );
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+    const createObserver = () => {
+
+      const isMobile = mediaQuery.matches;
+
+      return new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisible(true);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: isMobile ? 0.15 : 0.3,
+          rootMargin: isMobile
+            ? "0px 0px -150px 0px"
+            : "0px 0px -100px 0px"
+        }
+      );
+    };
+
+    let observer = createObserver();
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect();
+    // 🔁 Handle resize / rotation
+    const handleResize = () => {
+      if (observer) observer.disconnect();
+      observer = createObserver();
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      if (observer) observer.disconnect();
+      mediaQuery.removeEventListener("change", handleResize);
+    };
 
   }, []);
 
+  // ✅ Submit Handler
   const handleSubmit = async (e) => {
     e.preventDefault();
 

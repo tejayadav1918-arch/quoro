@@ -137,3 +137,19 @@
     line-height: 1.6;
   }
 }
+@media (max-width: 768px) {
+  .links-columns {
+    grid-template-columns: 1fr; /* stack */
+    gap: 20px;
+  }
+
+  .footer-logo {
+    margin-top: 20px;         /* remove negative push */
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .footer-logo img {
+    height: 120px; /* smaller logo */
+  }
+}

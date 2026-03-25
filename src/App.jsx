@@ -15,7 +15,7 @@ function App() {
       {/* WHATSAPP FLOAT */}
       <div className="whatsapp-container">
         <a
-          href="https://wa.me/917799571879?text=Hello%20There%20Company!%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services."
+          href="https://wa.me/919001865202?text=Hello%20There%20!%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-float"
@@ -27,6 +27,7 @@ function App() {
 
       {/* ROUTER */}
       <Router>
+        
         <ScrollToTop />
         <Navbar />
 

@@ -29,13 +29,16 @@ function Navbar() {
       <nav className="navbar">
 
         <div className="logo-section">
-          <div className="rotating-ring"></div>
           <img 
             src="./videos/logo.png" 
             alt="Quoro Technologies" 
             className="logo-image"
           />
+           <span className="company-text">
+    QUORO TECHNOLOGIES PRIVATE LIMITED
+  </span>
         </div>
+        
 
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <Link to="/" onClick={closeMenu}>Home</Link>
