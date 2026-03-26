@@ -119,7 +119,7 @@ function Hero() {
           name="description"
           content="We provide enterprise IT services, web development, and scalable digital solutions for modern businesses."
         />
-        <link rel="canonical" href="https://yourdomain.com/" />
+        <link rel="canonical" href="https://quoro.netlify.app/" />
       </Helmet>
 
     <div>

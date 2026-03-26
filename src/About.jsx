@@ -63,7 +63,7 @@ function About() {
     <Helmet>
   <title>About Us | Quoro Technologies</title>
   <meta name="description" content="Learn more about our IT services company, our mission, and how we deliver scalable solutions." />
-  <link rel="canonical" href="https://yourdomain.com/about" />
+  <link rel="canonical" href="https://quoro.netlify.app/about" />
 </Helmet>
     <div>
 
