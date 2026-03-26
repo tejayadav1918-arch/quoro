@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Contact.css";
+import { Helmet } from "react-helmet-async";
 
 function Contact() {
 
@@ -101,6 +102,11 @@ function Contact() {
 
   return (
     <>
+    <Helmet>
+      <title>Contact Us | Quoro Technologies </title>
+  <meta name="description" content="Get in touch with our team for IT services and business solutions." />
+  <link rel="canonical" href="https://yourdomain.com/contact" />
+</Helmet>
       <section
         ref={sectionRef}
         className={`contact-main-page ${mounted && visible ? "show" : ""}`}

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./About.css";
+import { Helmet } from "react-helmet-async";
 
 function About() {
 
@@ -58,6 +59,12 @@ function About() {
   }, []);
 
   return (
+    <>
+    <Helmet>
+  <title>About Us | Quoro Technologies</title>
+  <meta name="description" content="Learn more about our IT services company, our mission, and how we deliver scalable solutions." />
+  <link rel="canonical" href="https://yourdomain.com/about" />
+</Helmet>
     <div>
 
       {/* HERO */}
@@ -219,6 +226,7 @@ function About() {
       </div>
 
     </div>
+    </>
   );
 }
 

@@ -5,6 +5,7 @@ import ServicesGlimpse from "./ServiceGlimpse.jsx";
 import Advantages from "./Adavantages.jsx";
 import { Link } from "react-router-dom";
 import ContactGlobe from "./ContactGlobe.jsx";
+import { Helmet } from "react-helmet-async";
 
 
 function Hero() {
@@ -111,6 +112,16 @@ function Hero() {
 };
 
   return (
+    <>
+    <Helmet>
+        <title>Quoro Technologies Private Limiteds</title>
+        <meta
+          name="description"
+          content="We provide enterprise IT services, web development, and scalable digital solutions for modern businesses."
+        />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
+
     <div>
 
       {/* HERO */}
@@ -329,6 +340,7 @@ function Hero() {
       )}
 
     </div>
+    </>
   );
 }
 

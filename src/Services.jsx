@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Services.css";
+import { Helmet } from "react-helmet-async";
 
 function FlipCard({ children }) {
   const ref = useRef(null);
@@ -214,6 +215,12 @@ export default function FlipStackPage() {
   }, []);
 
   return (
+    <>
+    <Helmet>
+  <title>Our Services | Quoro Technologies</title>
+  <meta name="description" content="Explore our IT services including web development, enterprise solutions, and digital transformation." />
+  <link rel="canonical" href="https://yourdomain.com/services" />
+</Helmet>
     <div className="fc-page">
 
       <div className="fc-hero">
@@ -252,5 +259,6 @@ export default function FlipStackPage() {
       </div>
 
     </div>
+    </>
   );
 }
