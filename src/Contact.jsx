@@ -106,7 +106,7 @@ function Contact() {
     <Helmet>
       <title>Contact Us | Quoro Technologies </title>
   <meta name="description" content="Get in touch with our team for IT services and business solutions." />
-  <link rel="canonical" href="https://quoro.netlify.app/contact" />
+  <link rel="canonical" href="https://quorotechnologiespvtltd.com/contact" />
 </Helmet>
       <section
         ref={sectionRef}

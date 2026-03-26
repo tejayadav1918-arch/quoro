@@ -219,7 +219,7 @@ export default function FlipStackPage() {
     <Helmet>
   <title>Our Services | Quoro Technologies</title>
   <meta name="description" content="Explore our IT services including web development, enterprise solutions, and digital transformation." />
-  <link rel="canonical" href="https://quoro.netlify.app/services" />
+  <link rel="canonical" href="https://quorotechnologiespvtltd.com/services" />
 </Helmet>
     <div className="fc-page">
 

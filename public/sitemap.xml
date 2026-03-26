@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://quorotechnologiespvtltd.com/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/services</loc>
+    <loc>https://quorotechnologiespvtltd.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/about</loc>
+    <loc>https://quorotechnologiespvtltd.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/contact</loc>
+    <loc>https://quorotechnologiespvtltd.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

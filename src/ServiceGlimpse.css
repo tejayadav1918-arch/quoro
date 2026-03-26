@@ -167,6 +167,7 @@
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
+
   .sg-grid {
     width: 92%;
     grid-template-columns: 1fr;
