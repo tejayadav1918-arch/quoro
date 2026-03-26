@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Contact.css";
 import { Helmet } from "react-helmet-async";
+import GlobeMap from "./ContactGlobe";
 
 function Contact() {
 
@@ -179,6 +180,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      <GlobeMap />
 
       {success && (
         <div className="contact-main-success-overlay">
