@@ -114,11 +114,8 @@ function Hero() {
   return (
     <>
     <Helmet>
-        <title>Quoro Technologies Private Limited</title>
-        <meta
-          name="description"
-          content="We provide enterprise IT services, web development, and scalable digital solutions for modern businesses."
-        />
+        <title>Quoro Technologies Pvt Ltd | Software, Web & IT Services Company</title>
+        <meta name="description" content="Quoro Technologies Pvt Ltd is a leading IT services company specializing in custom software development, web solutions, and scalable digital systems for modern businesses. We help organizations streamline operations, improve efficiency, and accelerate growth through secure, reliable, and future-ready technology solutions. Our expertise includes enterprise applications, cloud-based systems, and business automation tailored to meet evolving industry demands." />
         <link rel="canonical" href="https://quorotechnologiespvtltd.com/" />
       </Helmet>
 
