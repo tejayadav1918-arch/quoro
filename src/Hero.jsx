@@ -238,7 +238,7 @@ function Hero() {
         mounted && aboutVisible ? "book-open" : ""
       }`}
     >
-      Learn More
+      Learn About us
     </span>
   </Link>
 </div>
@@ -292,26 +292,26 @@ function Hero() {
             >
 
               <div className="form-row">
-                <div className="form-group delay-1">
-                  <label>First Name *</label>
-                  <input type="text" required />
-                </div>
+  <div className="form-group delay-1">
+    <label htmlFor="firstName2">First Name *</label>
+    <input id="firstName2" type="text" required />
+  </div>
 
-                <div className="form-group delay-2">
-                  <label>Last Name *</label>
-                  <input type="text" required />
-                </div>
-              </div>
+  <div className="form-group delay-2">
+    <label htmlFor="lastName2">Last Name *</label>
+    <input id="lastName2" type="text" required />
+  </div>
+</div>
 
-              <div className="form-group delay-3">
-                <label>Email *</label>
-                <input type="email" required />
-              </div>
+<div className="form-group delay-3">
+  <label htmlFor="email2">Email *</label>
+  <input id="email2" type="email" required />
+</div>
 
-              <div className="form-group delay-4">
-                <label>Message</label>
-                <textarea rows="5"></textarea>
-              </div>
+<div className="form-group delay-4">
+  <label htmlFor="message2">Message</label>
+  <textarea id="message2" rows="5"></textarea>
+</div>
 
               <button
                 type="submit"
