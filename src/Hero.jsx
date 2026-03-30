@@ -114,7 +114,7 @@ function Hero() {
   return (
     <>
     <Helmet>
-        <title>Quoro Technologies Private Limiteds</title>
+        <title>Quoro Technologies Private Limited</title>
         <meta
           name="description"
           content="We provide enterprise IT services, web development, and scalable digital solutions for modern businesses."
