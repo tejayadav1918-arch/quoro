@@ -104,14 +104,21 @@ function Contact() {
   return (
     <>
     <Helmet>
-      <title>Contact Us | Quoro Technologies </title>
-  <meta name="description" content="Get in touch with our team for IT services and business solutions." />
+      <title>Contact Quoro Technologies Pvt Ltd | IT Services</title>
+  <meta
+  name="description"
+  content="Contact Quoro Technologies Pvt Ltd for professional IT services, software development, and web solutions. Reach out to our team for reliable and scalable technology solutions."
+/>
   <link rel="canonical" href="https://quorotechnologiespvtltd.com/contact" />
 </Helmet>
       <section
         ref={sectionRef}
         className={`contact-main-page ${mounted && visible ? "show" : ""}`}
       >
+          <p className="seo-hidden">
+    Contact Quoro Technologies Pvt Ltd for IT services, software development,
+    and web solutions tailored to your business needs.
+  </p>
         <div className="contact-main-container">
 
           {/* LEFT IMAGE */}
