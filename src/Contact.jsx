@@ -147,24 +147,24 @@ function Contact() {
 
               <div className="contact-main-form-row">
                 <div className="contact-main-form-group delay-1">
-                  <label>First Name *</label>
-                  <input type="text" required />
+                  <label for="name"> First Name</label>
+<input id="name" type="text" required />
                 </div>
 
                 <div className="contact-main-form-group delay-2">
-                  <label>Last Name *</label>
-                  <input type="text" required />
+                  <label for="lastName"> Last Name</label>
+<input id="lastName" type="text" required />
                 </div>
               </div>
 
               <div className="contact-main-form-group delay-3">
-                <label>Email *</label>
-                <input type="email" required />
+                <label for="email">Email *</label>
+                <input id="email" type="email" required />
               </div>
 
               <div className="contact-main-form-group delay-4">
-                <label>Message</label>
-                <textarea rows="5"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" rows="5"></textarea>
               </div>
 
               <button
