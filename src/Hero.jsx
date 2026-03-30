@@ -138,11 +138,13 @@ function Hero() {
           <div className="hero-right">
 
             <div className="hero-content">
-              <h1 className="book-wrapper">
-                <span className={`book-text ${mounted && textVisible ? "book-open" : ""}`}>
-                  Enterprise-Grade Technology Services
-                </span>
-              </h1>
+              <h1 className="book-wrapper hero-important">
+  <span className={`book-text ${
+    mounted && textVisible ? "book-open" : ""
+  }`}>
+    Enterprise-Grade Technology Services
+  </span>
+</h1>
 
               <p className="book-wrapper">
                 <span className={`book-text delay-1 ${mounted && textVisible ? "book-open" : ""}`}>

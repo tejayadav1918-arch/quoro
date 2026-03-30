@@ -332,7 +332,11 @@ body {
   }
 }
 /* ================= GLOBAL FADE SYSTEM ================= */
-
+.hero-important .book-text {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.3s ease;
+}
 
 /* ================= BOOK ANIMATION ================= */
 
