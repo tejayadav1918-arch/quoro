@@ -64,7 +64,6 @@
   height: 55px; /* 🔥 balanced size */
   width: auto;
   object-fit: contain;
-  padding-left: 10px;
 }
 
 .company-text {
