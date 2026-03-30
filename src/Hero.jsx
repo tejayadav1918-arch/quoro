@@ -132,14 +132,7 @@ function Hero() {
         <div className="hero-container">
 
           <div className={`hero-video ${mounted && heroVisible ? "video-show" : ""}`}>
-            <video
-  src="/videos/download.mp4"
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="none"
-/>
+            <video src="/videos/download.mp4" autoPlay loop muted playsInline />
           </div>
 
           <div className="hero-right">
@@ -162,7 +155,7 @@ function Hero() {
             </div>
 
             <div className={`hero-image ${mounted && heroVisible ? "image-show" : ""}`}>
-              <img src="/videos/JAIN.jpg" loading="eager" alt="Enterprise" />
+              <img src="/videos/JAIN.jpg" alt="Enterprise" />
             </div>
 
           </div>
@@ -194,7 +187,7 @@ function Hero() {
 
         <div className="home-about-layout">
           <div className="home-about-image">
-            <img src="/videos/akka.avif" loading="lazy" alt="About" />
+            <img src="/videos/akka.avif" alt="About" />
           </div>
 
           <div className="home-about-content-box">
