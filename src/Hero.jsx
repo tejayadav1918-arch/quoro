@@ -155,7 +155,7 @@ function Hero() {
   <span className={`book-text ${
     mounted && textVisible ? "book-open" : ""
   }`}>
-    Enterprise-Grade Technology Services
+    Quoro Technologies Pvt Ltd – Software & IT Services Company
   </span>
 </h1>
 

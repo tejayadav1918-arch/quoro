@@ -331,6 +331,10 @@ body {
     line-height: 1.5;
   }
 }
+.seo-text {
+  position: absolute;
+  left: -9999px;
+}
 /* ================= GLOBAL FADE SYSTEM ================= */
 .hero-important .book-text {
   opacity: 1 !important;
