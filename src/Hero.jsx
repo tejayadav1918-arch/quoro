@@ -125,14 +125,11 @@ function Hero() {
   "@type": "Organization",
   "name": "Quoro Technologies Pvt Ltd",
   "url": "https://quorotechnologiespvtltd.com/",
-  "logo": "https://quorotechnologiespvtltd.com/logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/",
-    "https://www.instagram.com/"
-  ]
+  "logo": "https://quorotechnologiespvtltd.com/favicon.png",
 }
 `}
 </script>
+
       </Helmet>
 
     <div>
@@ -166,6 +163,10 @@ function Hero() {
                 </span>
               </p>
             </div>
+            <p className="seo-text">
+  Quoro Technologies Pvt Ltd provides enterprise software development,
+  web applications, cloud solutions, and scalable IT services for businesses.
+</p>
 
             <div className={`hero-image ${mounted && heroVisible ? "image-show" : ""}`}>
               <img src="/videos/JAIN.jpg" alt="Enterprise" />

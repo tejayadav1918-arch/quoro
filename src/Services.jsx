@@ -159,49 +159,49 @@ const fcItems = [
   {
   
     icon: <IconInfra />,
-    title: "IT Infrastructure Management",
+    title: "IT Infrastructure Management Services",
     desc: "Comprehensive management of organizational IT infrastructure including servers, networks, and storage systems to ensure high availability, performance stability, and operational continuity."
   },
   {
 
     icon: <IconCloud />,
-    title: "Cloud Migration & Deployment",
+    title: "Cloud Migration and Deployment Services",
     desc: "End-to-end migration of business applications and data from on-premise environments to cloud platforms, ensuring secure transfer, optimized resource utilization, and minimal downtime."
   },
   {
 
     icon: <IconSecurity />,
-    title: "Cybersecurity Implementation",
+    title: "Cybersecurity Services and Implementation",
     desc: "Deployment of advanced security frameworks and protocols to protect digital assets, prevent unauthorized access, and ensure compliance with industry security standards."
   },
   {
 
     icon: <IconAnalytics />,
-    title: "Data Analytics & Business Intelligence",
+    title: "Data Analytics and Business Intelligence Services",
     desc: "Extraction, processing, and analysis of business data to generate actionable insights, enabling informed decision-making and strategic planning."
   },
   {
 
     icon: <IconConsulting />,
-    title: "IT Consulting & Digital Transformation",
+    title: "IT Consulting and Digital Transformation Services",
     desc: "Strategic consulting to modernize IT systems, optimize workflows, and implement digital technologies that improve efficiency and business performance."
   },
   {
 
     icon: <IconDevOps />,
-    title: "DevOps Implementation & Automation",
+    title: "DevOps Implementation And Automation Services",
     desc: "Design and implementation of DevOps practices including CI/CD pipelines, infrastructure as code, and automated deployment workflows to enhance development efficiency, system reliability, and faster release cycles."
   },
   {
 
     icon: <IconDatacenter />,
-    title: "DATA CENTER INFRASTRUCTURE MANAGEMENT SERVICE",
+    title: "Data Center Infrastructure Management Services",
     desc: "We provide end-to-end data center management solutions, ensuring reliable infrastructure, efficient resource utilization, and uninterrupted operations."
   },
   {
 
     icon: <IconTransformation />,
-    title: "DIGITAL TRANSFORMATION CONSULTING SERVICE",
+    title: "Digital Transformation Consulting Services",
     desc: "We help organizations adopt modern technologies and transform traditional processes to enhance efficiency, agility, and innovation. Our consulting approach focuses on aligning technology with business goals, enabling seamless integration, improved customer experiences."
   },
 ];
@@ -217,13 +217,17 @@ export default function FlipStackPage() {
   return (
     <>
     <Helmet>
-  <title>Our Services | Quoro Technologies</title>
+  <title>IT Services | Quoro Technologies – Software, Cloud & Digital Solutions</title>
   <meta name="description" content="Explore our IT services including web development, enterprise solutions, and digital transformation." />
   <link rel="canonical" href="https://quorotechnologiespvtltd.com/services" />
 </Helmet>
     <div className="fc-page">
 
       <div className="fc-hero">
+        <p className="seo-text">
+Quoro Technologies provides enterprise IT services including cloud migration,
+cybersecurity, DevOps, data analytics, and digital transformation solutions.
+</p>
         <p className="book-wrapper">
           <span className={`fc-label book-text ${heroVisible ? "book-open" : ""}`}>
             Our Services
@@ -231,12 +235,12 @@ export default function FlipStackPage() {
         </p>
         <h1 className="book-wrapper">
           <span className={`fc-title book-text delay-1 ${heroVisible ? "book-open" : ""}`}>
-            Empowering Your<br />Business Growth
+            IT Services by Quoro Technologies Pvt Ltd
           </span>
         </h1>
         <p className="book-wrapper">
           <span className={`fc-subtitle book-text delay-2 ${heroVisible ? "book-open" : ""}`}>
-            Discover how our solutions can elevate your business.
+            Discover how our IT services and software solutions can elevate your business.
           </span>
         </p>
       </div>

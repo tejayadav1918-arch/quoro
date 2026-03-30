@@ -46,8 +46,8 @@ function About() {
         });
       },
       {
-        threshold: 0.3,
-        rootMargin: "0px 0px -120px 0px"
+        threshold: 0.2,
+        rootMargin: "0px 0px -150px 0px"
       }
     );
 
@@ -61,7 +61,7 @@ function About() {
   return (
     <>
     <Helmet>
-  <title>About Us | Quoro Technologies</title>
+  <title>About Quoro Technologies Pvt Ltd | Our Vision & Approach</title>
   <meta name="description" content="Learn more about our IT services company, our mission, and how we deliver scalable solutions." />
   <link rel="canonical" href="https://quorotechnologiespvtltd.com/about" />
 </Helmet>
@@ -83,7 +83,7 @@ function About() {
         ref={bannerRef}
         className={`about-banner ${bannerVisible ? "show" : ""}`}
       >
-        <img src="/videos/bal.png" alt="Banner" />
+        <img src="/videos/bal.png" alt="About Quoro Technologies company banner" />
       </section>
 
       {/* CONTENT */}
@@ -93,10 +93,10 @@ function About() {
           {/* ROW 1 */}
           <div
             ref={row1Ref}
-            className={`about-row fade-up ${row1Visible ? "show" : ""}`}
+            className={`about-row fade-up delay-row-1 ${row1Visible ? "show" : ""}`}
           >
             <div className="about-image">
-              <img src="/videos/uff.jpg" alt="Vision" />
+              <img src="/videos/uff.jpg" alt="Vision of Quoro Technologies" />
             </div>
 
             <div className="about-content">
@@ -108,10 +108,8 @@ function About() {
 
               <p className="book-wrapper">
                 <span className={`book-text delay-1 ${row1Visible ? "book-open" : ""}`}>
-                  To redefine the future of enterprise technology by building intelligent,
-                  secure, and scalable digital ecosystems that empower organizations to
-                  innovate without limits. We envision a world where technology is not just a tool,
-                  but a strategic force
+                  At Quoro Technologies Pvt Ltd, our vision is to redefine the future of enterprise technology by building intelligent,
+secure, and scalable digital ecosystems that empower organizations to innovate without limits.
                 </span>
               </p>
 
@@ -159,7 +157,7 @@ function About() {
           {/* ROW 2 */}
           <div
             ref={row2Ref}
-            className={`about-row fade-up ${row2Visible ? "show" : ""}`}
+            className={`about-row fade-up delay-row-2 ${row2Visible ? "show" : ""}`}
           >
             <div className="about-content">
               <h2 className="book-wrapper">
@@ -218,7 +216,7 @@ function About() {
             </div>
 
             <div className="about-image">
-              <img src="/videos/gone.jpg" alt="Approach" />
+              <img src="/videos/gone.jpg" alt="Approach of Quoro Technologies" />
             </div>
           </div>
 

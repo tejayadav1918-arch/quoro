@@ -8,6 +8,7 @@ import {
   FiCpu
 } from "react-icons/fi";
 import "./ServiceGlimpse.css";
+import { Link } from "react-router-dom";
 
 const slidesData = [
   {
@@ -174,9 +175,15 @@ function ServicesGlimpse() {
           />
         ))}
       </div>
-
+<div className="sg-cta-wrapper">
+  <Link to="/services" className="sg-cta-btn">
+    Explore Our IT Services
+  </Link>
+</div>
     </section>
+    
     </div>
+    
   );
 }
 

@@ -201,3 +201,22 @@
   left: 0;
   right: 0;
 }
+.sg-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.sg-cta-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #00d4aa;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sg-cta-btn:hover {
+  transform: translateY(-2px);
+}
