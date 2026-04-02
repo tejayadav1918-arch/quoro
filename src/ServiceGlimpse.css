@@ -169,7 +169,7 @@
 @media (max-width: 900px) {
 
   .sg-grid {
-    width: 92%;
+    width: 80%;
     grid-template-columns: 1fr;
   }
 

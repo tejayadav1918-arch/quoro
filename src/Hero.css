@@ -279,7 +279,7 @@ body {
 /* RESPONSIVE */
 /* ===================================== */
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
     gap: 40px;
@@ -287,8 +287,8 @@ body {
   }
 
   .hero-video {
-    height: 260px;
-    min-height: unset;
+    height: 400px;
+    min-height: 500px;
   }
 
   .hero-image img {
