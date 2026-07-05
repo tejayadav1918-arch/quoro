@@ -30,7 +30,7 @@ function Navbar() {
 
         <div className="logo-section">
           <img 
-            src="./videos/logo.png" 
+            src="./favicon.jpeg" 
             alt="Quoro Technologies" 
             className="logo-image"
           />

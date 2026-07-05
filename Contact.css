@@ -1,0 +1,244 @@
+/* ================= CONTACT PAGE ================= */
+
+.contact-main-page {
+  padding: 50px 2%;
+  background: white;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1.5s cubic-bezier(0.22,1,0.36,1);
+}
+
+.contact-main-page.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GRID */
+
+.contact-main-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  margin: 0;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* LEFT IMAGE */
+
+.contact-main-left {
+  border-radius: 40px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-120px);
+  transition: all 1.4s ease;
+}
+
+.contact-main-left.slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-main-left img {
+  width: 750px;
+  height: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+/* RIGHT SIDE */
+
+.contact-main-right {
+  opacity: 0;
+  transform: translateX(120px);
+  transition: all 1.4s ease;
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 40px;     /* ensure rounded */
+   padding: 40px 80px 40px 0px;
+}
+
+.contact-main-right.slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-main-small {
+  font-size: 14px;
+  color: #0f2e1d;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.contact-main-title {
+  font-size: 64px;
+  margin: 10px 0;
+  color: #0f2e1d;
+  font-style: normal;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.contact-main-subtitle {
+  font-size: 18px;
+  margin-bottom: 60px;
+  color: #2c3e3a;
+  text-align: center;
+}
+
+/* FORM */
+
+.contact-main-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-main-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.form-show .contact-main-form-group {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-show .delay-1 { transition-delay: 0.5s; }
+.form-show .delay-2 { transition-delay: 0.7s; }
+.form-show .delay-3 { transition-delay: 0.9s; }
+.form-show .delay-4 { transition-delay: 1.1s; }
+
+.contact-main-form-group label {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-main-form-group input,
+.contact-main-form-group textarea {
+  border: none;
+  border-bottom: 1px solid #0f2e1d;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-main-form-group input:focus,
+.contact-main-form-group textarea:focus {
+  border-bottom: 2px solid #0c2b24;
+}
+
+/* BUTTON */
+
+.contact-main-btn {
+  margin-top: 30px;
+  width: 220px;
+  padding: 16px 0;
+  background: #0f2e1d;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.btn-pop {
+  transform: scale(1);
+  opacity: 1;
+  transition-delay: 1.4s;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .contact-main-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-main-left img {
+    height: 300px;
+  }
+
+  .contact-main-title {
+    font-size: 40px;
+  }
+
+  .contact-main-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= SUCCESS POPUP ================= */
+
+.contact-main-success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOverlay 0.3s ease forwards;
+}
+
+.contact-main-success-popup {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.2);
+  transform: scale(0.7);
+  opacity: 0;
+  animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+
+.contact-main-success-icon {
+  font-size: 40px;
+  color: #0f2e1d;
+  margin-bottom: 15px;
+}
+
+.contact-main-success-popup h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #0f2e1d;
+}
+
+.contact-main-success-popup p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Animations */
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contact-main-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

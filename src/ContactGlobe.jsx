@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./ContactGlobe.css";
 
 const MAPS_URL =
-  "https://maps.app.goo.gl/NqtJnS4dBhW5aRn26";
+  "https://maps.app.goo.gl/ADSkFEaau8GpUFVu8";
 
 export default function GlobeMap() {
   const starsRef = useRef(null);
@@ -145,10 +145,11 @@ export default function GlobeMap() {
         <div className="gs-map-side">
           <div className="gs-map-tag">Our Location</div>
           <div className="gs-map-heading">
-            Kerala,<br />India
+            Tamil Nadu,<br />India
           </div>
           <div className="gs-map-desc">
-            Ernakulam, Kochi<br />
+            Choolaimedu ,<br />
+            Chennai
           </div>
 
           {/* Clicking the card opens Google Maps */}
@@ -195,7 +196,7 @@ export default function GlobeMap() {
 
                 {/* Label */}
                 <text x="178" y="94" fill="#88ffb8" fontSize="10" fontFamily="Syne,sans-serif" fontWeight="700">
-                  Kerela
+                  Chennai
                 </text>
 
                 {/* Scale bar */}
@@ -216,8 +217,8 @@ export default function GlobeMap() {
               <div className="gs-map-footer">
                 <div className="gs-pin-badge">📍</div>
                 <div>
-                  <div className="gs-loc-name">Ernakulam</div>
-                  <div className="gs-loc-coords"> Kerala, India</div>
+                  <div className="gs-loc-name">Chennai</div>
+                  <div className="gs-loc-coords"> Tamil Nadu, India</div>
                 </div>
               </div>
             </div>

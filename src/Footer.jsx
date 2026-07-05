@@ -57,9 +57,7 @@ function Footer() {
               <FiMapPin className="info-icon" />
               <p>
                 <span className={`book-text delay-1 ${footerVisible ? "book-open" : ""}`}>
-                  67/4351/A10, Swapnil Enclave, Shanmugham Road<br />
-                  High Court Junction, Kochi<br />
-                  Ernakulam, Kerala - 682031
+                  Shop No. S-1 ,Second Floor ,No.42/170, Nelson Manickam Road,<br /> West Namachivayapuram, Choolaimedu,<br /> Chennai – 600 094<br />
                 </span>
               </p>
             </div>
@@ -122,7 +120,7 @@ function Footer() {
 
   {/* 👇 ADD THIS */}
   <div className="footer-logo fade-logo">
-  <img src="./videos/logo.png" alt="Quoro Logo" />
+  <img src="./favicon.jpeg" alt="Quoro Logo" />
 </div>
 
 </div>
